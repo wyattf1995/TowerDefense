@@ -10,7 +10,7 @@ namespace TowerDefense
     {
         public void Main()
         {
-
+            Tower tower = new Tower();
         }
     }
 }
