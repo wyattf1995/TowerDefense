@@ -8,5 +8,9 @@ namespace TowerDefense
 {
     class Game
     {
+        public void Main()
+        {
+
+        }
     }
 }
