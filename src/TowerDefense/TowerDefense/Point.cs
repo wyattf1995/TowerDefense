@@ -16,5 +16,10 @@ namespace TowerDefense
             X = x;
             Y = y;
         }
+
+        public int DistanceTo(int x, int y)
+        {
+
+        }
     }
 }
