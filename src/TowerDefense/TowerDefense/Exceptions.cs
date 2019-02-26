@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TowerDefense
 {
-    class TowerDefenseExceptions
+    class TowerDefenseException : Exception
     {
 
     }
