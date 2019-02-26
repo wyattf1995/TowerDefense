@@ -8,6 +8,10 @@ namespace TowerDefense
 {
     class TowerDefenseException : Exception
     {
+        public TowerDefenseException()
+        {
+
+        }
         public TowerDefenseException(string message) : base(message)
         {
 
@@ -16,6 +20,10 @@ namespace TowerDefense
 
     class OutOfBoundsException : TowerDefenseException
     {
+        public OutOfBoundsException()
+        {
+
+        }
         public OutOfBoundsException(string message) : base(message)
         {
 
