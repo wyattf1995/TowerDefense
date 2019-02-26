@@ -10,4 +10,9 @@ namespace TowerDefense
     {
 
     }
+
+    class OutOfBoundsException : TowerDefenseException
+    {
+
+    }
 }
