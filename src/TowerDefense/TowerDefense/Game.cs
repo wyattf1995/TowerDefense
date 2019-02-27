@@ -26,19 +26,24 @@ namespace TowerDefense
                         new MapLocation(7, 2, map),
                         }
                     );
-               
+                MapLocation location = path.GetLocationAt(8);
+
+                if (location != null)
+                {
+                    Console.WriteLine(location.X + ", " + location.Y);
+                }
             }
-            catch (OutOfBoundsException e)
+            catch (OutOfBoundsException ex)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine(ex.Message);
             }
             catch (TowerDefenseException)
             {
                 Console.WriteLine("Unhandled TowerDefenseException");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Console.WriteLine("Unhandled Exception");
+                Console.WriteLine("Unhandled Exception: " + ex);
             }
 
             Console.ReadKey();
