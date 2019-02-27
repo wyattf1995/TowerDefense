@@ -8,5 +8,11 @@ namespace TowerDefense
 {
     class Path
     {
+        private MapLocation[] _path;
+
+        public Path(MapLocation[] path)
+        {
+
+        }
     }
 }
