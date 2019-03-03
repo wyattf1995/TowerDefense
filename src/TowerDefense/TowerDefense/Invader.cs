@@ -9,6 +9,11 @@ namespace TowerDefense
     class Invader
     {
       public MapLocation Location { get; set; }
+
+      public Invader(Path path)
+      {
+          Location = path.GetLocationAt(0);
+      }
         
     }
 }
