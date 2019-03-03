@@ -26,11 +26,15 @@ namespace TowerDefense
                         new MapLocation(7, 2, map),
                         }
                     );
-                MapLocation location = path.GetLocationAt(8);
+               
 
                 Invader invader = new Invader();
                 MapLocation location = new MapLocation(0, 0, map);
+
+                location = invader.Location;
             }
+
+            
             catch (OutOfBoundsException ex)
             {
                 Console.WriteLine(ex.Message);
