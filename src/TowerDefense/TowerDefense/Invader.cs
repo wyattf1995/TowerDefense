@@ -8,12 +8,13 @@ namespace TowerDefense
 {
     class Invader
     {
-      public MapLocation Location { get; set; }
+        private int _pathStep = 0;
+        public MapLocation Location { get; set; }
 
-      public Invader(Path path)
-      {
-          Location = path.GetLocationAt(0);
-      }
+        public Invader(Path path)
+        {
+            Location = path.GetLocationAt(0);
+        }
         
     }
 }
