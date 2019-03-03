@@ -8,6 +8,8 @@ namespace TowerDefense
 {
     class Invader
     {
-        public MapLocation Location;
+        private MapLocation Location;
+
+
     }
 }
