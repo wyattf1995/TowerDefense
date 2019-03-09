@@ -10,16 +10,22 @@ namespace TowerDefense
     {
         private readonly Path _path;
 
+        //initial starting place on path, not readonly because it will change over time
         private int _pathStep = 0;
 
-        public MapLocation Location { get; set; }
+        //Location property
+        public MapLocation Location
+        {
+            get { return _path.GetLocationAt(_pathStep); }
+        }
 
+        //Invader constructor
         public Invader(Path path)
         {
             _path = path;
-            Location = path.GetLocationAt(_pathStep);
         }
 
+        //move method
         public void Move()
         {
             _pathStep += 1;
