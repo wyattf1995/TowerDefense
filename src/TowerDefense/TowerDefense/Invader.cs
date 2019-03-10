@@ -16,6 +16,10 @@ namespace TowerDefense
         //Location property
         public MapLocation Location => _path.GetLocationAt(_pathStep);
 
+        //Health property for the invader that has get and set as public so other things can change the health of the invader (the tower)
+        //declares its initial value to 2
+        public int Health { get; set; } = 2;
+
         //Invader constructor
         public Invader(Path path)
         {
