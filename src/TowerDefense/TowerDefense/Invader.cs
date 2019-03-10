@@ -24,10 +24,7 @@ namespace TowerDefense
 
         //move method
         //moves to the next step on the path
-        public void Move()
-        {
-            _pathStep += 1;
-        }
+        public void Move() => _pathStep += 1;
         
     }
 }
