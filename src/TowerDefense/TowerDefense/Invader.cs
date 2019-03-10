@@ -29,6 +29,12 @@ namespace TowerDefense
         //move method
         //moves to the next step on the path
         public void Move() => _pathStep += 1;
+
+        //Method to decrease the health of the invader by a certain factor of damage
+        public void DecreaseHealth(int factor)
+        {
+            Health -= factor;
+        }
         
     }
 }
