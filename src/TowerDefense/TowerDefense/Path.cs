@@ -17,6 +17,8 @@ namespace TowerDefense
             _path = path;
         }
 
+        public int Length => _path.Length;
+
         //Method that returns 
         public MapLocation GetLocationAt(int pathStep)
         {
