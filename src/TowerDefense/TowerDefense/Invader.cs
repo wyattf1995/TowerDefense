@@ -21,10 +21,15 @@ namespace TowerDefense
         //changed set to private to make it clear to others that you should use the DecreaseHealth method instead
         public int Health { get; private set; } = 2;
 
+        //determines if the Invader made it to the end of the path without being killed
         public bool HasScored
         {
             get { return _pathStep >= _path.Length; }
         }
+
+        public bool IsNeutralized => Health <= 0;
+
+        public bool IsActive => !(IsNeutralized || HasScored);
 
         //Invader constructor
         public Invader(Path path)
