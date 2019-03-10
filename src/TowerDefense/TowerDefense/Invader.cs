@@ -14,10 +14,7 @@ namespace TowerDefense
         private int _pathStep = 0;
 
         //Location property
-        public MapLocation Location
-        {
-            get { return _path.GetLocationAt(_pathStep); }
-        }
+        public MapLocation Location => _path.GetLocationAt(_pathStep);
 
         //Invader constructor
         public Invader(Path path)
@@ -26,6 +23,7 @@ namespace TowerDefense
         }
 
         //move method
+        //moves to the next step on the path
         public void Move()
         {
             _pathStep += 1;

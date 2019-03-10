@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace TowerDefense
 {
+    //inherits from the Point class
     class MapLocation : Point
     {
+        //Constructor for the MapLocation class that also constructs the Point base object
         public MapLocation(int x, int y, Map map) : base(x, y)
         {
             if (!map.OnMap(this))
