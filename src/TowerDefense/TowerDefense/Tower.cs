@@ -8,6 +8,11 @@ namespace TowerDefense
 {
     class Tower
     {
+        private readonly MapLocation _location;
 
+        public Tower(MapLocation location)
+        {
+            _location = location;
+        }
     }
 }
