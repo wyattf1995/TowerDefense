@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace TowerDefense
 {
+    //inherits from the Point class
     class MapLocation : Point
     {
         //Constructor initializes the MapLocation object
