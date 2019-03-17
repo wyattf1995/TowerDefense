@@ -14,6 +14,7 @@ namespace TowerDefense
         {
             _location = location;
         }
+
         public void FireOnInvaders(Invader[] invaders)
         {
             int index = 0;
