@@ -9,6 +9,8 @@ namespace TowerDefense
 {
     class MapLocation : Point
     {
+        //Constructor initializes the MapLocation object
+        //which inherits from and is itself a Point
         public MapLocation(int x, int y, Map map) : base(x, y)
         {
             if (!map.OnMap(this))
