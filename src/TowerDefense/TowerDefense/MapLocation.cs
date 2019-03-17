@@ -14,6 +14,8 @@ namespace TowerDefense
         //which inherits from and is itself a Point
         public MapLocation(int x, int y, Map map) : base(x, y)
         {
+            //This if statement determines if the MapLocation point is outside the boundaries of the Map
+            //and if so throws an OutOfBoundsException
             if (!map.OnMap(this))
             {
                 throw new OutOfBoundsException(x + ", " + y + " is outside the boundaries of the map.");
