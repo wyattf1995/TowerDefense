@@ -18,10 +18,9 @@ namespace TowerDefense
         public void FireOnInvaders(Invader[] invaders)
         {
 
-            for (int index = 0; index < invaders.Length; index++)
+            foreach (Invader invader in invaders)
             {
-                Invader invader = invaders[index];
-                //Do stuff with invader here
+               //Do stuff with invader
 
             }
         }

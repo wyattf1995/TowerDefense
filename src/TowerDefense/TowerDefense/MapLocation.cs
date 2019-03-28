@@ -21,5 +21,11 @@ namespace TowerDefense
                 throw new OutOfBoundsException(x + ", " + y + " is outside the boundaries of the map.");
             }
         }
+        
+        //method to determine whether or not the invader is in firing range of a tower at a certain location
+        public bool InRangeOf(MapLocation location, int range)
+        {
+            return DistanceTo(location) <= range;
+        }
     }
 }
