@@ -11,7 +11,7 @@ namespace TowerDefense
         public readonly int X;
         public readonly int Y;
 
-        //Constructo initializes the Point object
+        //Constructor initializes the Point object
         public Point(int x, int y)
         {
             X = x;
