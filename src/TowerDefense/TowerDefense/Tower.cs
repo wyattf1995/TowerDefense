@@ -8,6 +8,9 @@ namespace TowerDefense
 {
     class Tower
     {
+        private const int _range = 1;
+        private const int _power = 1;
+
         private readonly MapLocation _location;
 
         public Tower(MapLocation location)
@@ -20,8 +23,13 @@ namespace TowerDefense
 
             foreach (Invader invader in invaders)
             {
-               //Do stuff with invader
-
+               //Checks whether the invader is active and within the declared range of 1 and if so fires upon it
+               if(invader.IsActive && _location.InRangeOf(invader.Location, _range))
+                {
+                    //decreases health of the invader by 1
+                    invader.DecreaseHealth(_power);
+                    break;
+                }
             }
         }
     }
