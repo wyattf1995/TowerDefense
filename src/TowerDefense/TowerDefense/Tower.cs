@@ -10,6 +10,9 @@ namespace TowerDefense
     {
         private const int _range = 1;
         private const int _power = 1;
+		private const double _accuracy = .75;
+
+        private static readonly Random _random = new Random();
 
         private readonly MapLocation _location;
 
@@ -17,6 +20,12 @@ namespace TowerDefense
         {
             _location = location;
         }
+
+		public bool IsSuccesfulShot()
+		{
+			return _random.NextDouble() < _accuracy;
+		}
+
 
         public void FireOnInvaders(Invader[] invaders)
         {
@@ -26,9 +35,17 @@ namespace TowerDefense
                //Checks whether the invader is active and within the declared range of 1 and if so fires upon it
                if(invader.IsActive && _location.InRangeOf(invader.Location, _range))
                 {
-                    //decreases health of the invader by 1
-                    invader.DecreaseHealth(_power);
-                    break;
+					if (IsSuccesfulShot())
+					{
+						//decreases health of the invader by 1
+						invader.DecreaseHealth(_power);
+						Console.WriteLine("Shot at and hit an invader!");
+					}
+					else
+					{
+						Console.WriteLine("Shot at and missed an invader.");
+					}
+					break;
                 }
             }
         }
