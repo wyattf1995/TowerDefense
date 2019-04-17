@@ -8,7 +8,7 @@ namespace TowerDefense
 {
 	class StrongInvader : Invader
 	{
-		public override int Health => base.Health;
+		public override double Health => base.Health;
 		public StrongInvader(Path path) : base(path)
 		{
 			

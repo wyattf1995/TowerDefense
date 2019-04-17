@@ -21,7 +21,7 @@ namespace TowerDefense
         //Health property for the invader that has get and set as public so other things can change the health of the invader (the tower)
         //declares its initial value to 2
         //changed set to private to make it clear to others that you should use the DecreaseHealth method instead
-        public virtual int Health { get; protected set; } = 2;
+        public virtual double Health { get; protected set; } = 2;
 
         //determines if the Invader made it to the end of the path without being killed
         public bool HasScored
@@ -44,7 +44,7 @@ namespace TowerDefense
         public void Move() => _pathStep += 1;
 
         //Method to decrease the health of the invader by a certain factor of damage
-        public virtual void DecreaseHealth(int factor)
+        public virtual void DecreaseHealth(double factor)
         {
             Health -= factor;
         }

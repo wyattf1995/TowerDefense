@@ -13,7 +13,7 @@ namespace TowerDefense
 		{
 
 		}
-		public override void DecreaseHealth(int factor)
+		public override void DecreaseHealth(double factor)
 		{
 			if(_random.NextDouble() < .5)
 			{
